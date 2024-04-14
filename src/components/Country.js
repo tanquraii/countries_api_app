@@ -3,6 +3,7 @@ import './country.css'
 import Accrodion from './Accrodion'
 import Query from './Query'
 import { useState } from 'react'
+import Countries from './Countries'
 const Country = () => {
   const [show,setShow] = useState(false);
   return (
@@ -17,12 +18,12 @@ const Country = () => {
           Filter by Region
           <i class="fa-solid fa-caret-down"></i>
         </div>
-        
         <Query/>
       </nav>
       {
       show && <Accrodion/>//if the show value is true then the component will show otherwise it wont
       }
+      <Countries/>
     </div>
   )
 }

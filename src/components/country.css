@@ -45,7 +45,7 @@ input{
 }
 
 .dropDown{
-    margin-top: 1rem;
+    margin-top: 2rem;
     width: 9rem;
     padding-left:0.5rem;
     padding:0.5rem 0.5rem;
@@ -53,7 +53,7 @@ input{
     background: white;
     display: flex;
     flex-direction: column;
-    top:7rem;
+    top:9rem;
     right:5rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -76,8 +76,20 @@ li:hover{
     background: white;
     justify-content: space-between;
     display: flex;
-    top:5rem;
+    top:7rem;
     right:5rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     cursor: pointer;
+    font-weight: 300;
+    height: 2rem;
+    align-items: center;
+}
+.countries img{
+    width:15rem;
+
+}
+.countries{
+    padding-left:4rem;
+    margin-top:10rem;
+    background: red;
 }
