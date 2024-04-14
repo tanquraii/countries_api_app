@@ -1,23 +1,28 @@
 import React from 'react'
 import './country.css'
+import Accrodion from './Accrodion'
+import Query from './Query'
 import { useState } from 'react'
 const Country = () => {
-    const [query,setQuery] = useState("");
-    function changeQuery(event){
-        setQuery(event.target.value);
-        console.log(query);
-    }
+  const [show,setShow] = useState(false);
   return (
     <div className='container'>
       <nav>
         <div className='where'>Where in the world?</div>
         <div className='dmode'><i class="fa fa-moon-o" aria-hidden="true"></i>Dark Mode</div>
-        <div className='search'>
-            <i class="fa fa-search" aria-hidden="true"></i>
-
-            <input onChange = {changeQuery} type='text' placeholder='Search for a country...'/>
+        
+        <div className='filter' onClick={()=>
+          setShow((show)=>!show)
+        }>
+          Filter by Region
+          <i class="fa-solid fa-caret-down"></i>
         </div>
+        
+        <Query/>
       </nav>
+      {
+      show && <Accrodion/>//if the show value is true then the component will show otherwise it wont
+      }
     </div>
   )
 }

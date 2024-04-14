@@ -38,7 +38,46 @@ nav{
     top:7rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 input{
     width: 17rem;
     border: none;
+}
+
+.dropDown{
+    margin-top: 1rem;
+    width: 9rem;
+    padding-left:0.5rem;
+    padding:0.5rem 0.5rem;
+    position: absolute;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    top:7rem;
+    right:5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+li{
+    list-style-type: none;
+    padding: 0.25rem 0rem 0.25rem 0rem;
+    font-weight: 300;
+    transition:0.15s;
+    cursor: pointer;
+}
+li:hover{
+    background: var(--Dark-Gray);
+    color:white;
+}
+.filter{
+    width: 9rem;
+    padding-left:0.5rem;
+    padding:0.5rem 0.5rem;
+    position: absolute;
+    background: white;
+    justify-content: space-between;
+    display: flex;
+    top:5rem;
+    right:5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer;
 }
