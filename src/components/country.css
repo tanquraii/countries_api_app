@@ -91,5 +91,24 @@ li:hover{
 .countries{
     padding-left:4rem;
     margin-top:10rem;
-    background: red;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.country{
+    width:15rem;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding-bottom:1rem;
+    margin: 1rem;
+}
+.info{
+    margin-left: 1rem;
+}
+.info h1{
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+.info span{
+    display: flex;
+    margin-top: 0.5rem;
 }

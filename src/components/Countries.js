@@ -1,43 +1,32 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import data from './data.json';
+import Data from './data.json';
 import './country.css'
 const Countries = () => {
-    const [country,setCountry] = useState([]);
-    const [name,setName] = useState("");
-    const [data,setData] = useState({
-        data1:'',
-        data2:'',
-        data3:''
-    });
-    const fetchData = async ()=>{
-        const response = await axios.get('https://restcountries.com/v3.1/all');
-        console.log(response.data[0]);
-        for(let i = 0;i<4;i++){
-            setCountry(response.data[i].flags.svg);
-            setName(response.data[i].name.common);
-            setData({...data,
-                data1:response.data[i].population,
-                data2:response.data[i].region,
-                data3:response.data[i].capital[i]
-            })
-        }
-        console.log(data)
-    }
-    useEffect(()=>{fetchData()},[])
+    const firstEight = Data.slice(0,8);
     return (
         <div className='countries'>
-            <div className='country'>
-                <img className = 'flag' src={country}/>
-                <div className='info'>
-                    <h1>{name}</h1>
-                    <p>{data.data1}</p>
-                    <p>{data.data2}</p>
-                    <p>{data.data3}</p>
-                </div>
-            </div>
-        </div>
+            {
+                firstEight.map(country=>{
+                    return (
+                        <div className='country'>
+                            <img src={country.flags.svg} alt='altushka'/>
+                            <div className='info'>
+                                <h1>{country.name}</h1>
+                                <span><h3>Population:</h3>{country.population}</span>
+                                <span><h3>Region:</h3>{country.region}</span>
+                                <span><h3>Capital:</h3>{country.capital}</span>
+                            </div>
+                        </div>
+                    )
+                })
+            }
+            
+        </div>  
     );
+    
+
+    
+    
+    
 };
 
 export default Countries;
