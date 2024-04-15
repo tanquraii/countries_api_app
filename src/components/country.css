@@ -88,13 +88,16 @@ li:hover{
     width:15rem;
 
 }
-.countries{
+.countries,.filterContainer{
     padding-left:4rem;
     margin-top:10rem;
     display: grid;
     grid-template-columns: auto auto auto auto;
 }
-.country{
+.filterContainer{
+    position: absolute;
+}
+.country,.filterCountries{
     width:15rem;
     background: white;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -126,4 +129,8 @@ li:hover{
 }
 .next{
     right: 0;
+}
+
+.filterFlag{
+    width: 15rem;
 }
