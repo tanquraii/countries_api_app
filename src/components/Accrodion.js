@@ -3,7 +3,15 @@ import './country.css'
 import { useState,useEffect } from 'react'
 import Data from './data.json'
 const Accrodion = () => {
+    const [pag,setPag] = useState(0);
     const [countries,setCountries] = useState([]);
+    function Next(){
+        setPag(pag+8);
+    }
+    function Prev(){
+        setPag(pag-8);
+    }
+    const firstEight = countries.slice(pag,pag+8);
     function Search(e){
         const word = e.target.textContent;
         const region = Data.filter(country=>country.region===word);
@@ -23,7 +31,8 @@ const Accrodion = () => {
                 <li onClick={Search}>Oceania</li>
             </ul>
             <div className='filterContainer'>
-                {countries.map((country) => (
+                <button className="buttons prev"onClick={Prev}><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+                {firstEight.map((country) => (
                     <div className='filterCountries'>
                         <img src={country.flags.svg} alt='Flag' className='filterFlag'/>
                         <div className='filterInfo'>
@@ -34,6 +43,7 @@ const Accrodion = () => {
                         </div>
                     </div>
                 ))}
+                <button className ="buttons next" onClick={Next}><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
             </div>
         </div>
     )
