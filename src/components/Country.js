@@ -19,6 +19,7 @@ const Country = () => {
           Filter by Region
           <i class="fa-solid fa-caret-down"></i>
         </div>
+        
         <Query/>
       </nav>
       {

@@ -11,6 +11,7 @@ const Query = () => {
         <i class="fa fa-search" aria-hidden="true"></i>
 
         <input onChange = {changeQuery} type='text' placeholder='Search for a country...'/>
+        
     </div>
     )
 }
