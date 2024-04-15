@@ -112,3 +112,18 @@ li:hover{
     display: flex;
     margin-top: 0.5rem;
 }
+.buttons{
+    position: absolute;
+    height: 5rem;
+    top:50%;
+    width: 2rem;
+    background: white;
+    border: none;
+    cursor: pointer;
+}
+.buttons:hover{
+    border: 1px solid black;
+}
+.next{
+    right: 0;
+}

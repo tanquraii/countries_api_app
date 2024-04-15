@@ -4,6 +4,7 @@ import Accrodion from './Accrodion'
 import Query from './Query'
 import { useState } from 'react'
 import Countries from './Countries'
+
 const Country = () => {
   const [show,setShow] = useState(false);
   return (
