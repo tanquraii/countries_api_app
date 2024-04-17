@@ -19,14 +19,15 @@ const Accrodion = () => {
         setCountries(region);
     }
     return(
-        <div className='dropDown'>
-            <ul>
+        <>
+        <ul className='unorder'>
                 <li onClick={Search}>Africa</li>
                 <li onClick={Search}>Americas</li>
                 <li onClick={Search}>Asia</li>
                 <li onClick={Search}>Europe</li>
                 <li onClick={Search}>Oceania</li>
-            </ul>
+        </ul>
+        <div className='dropDown'>
             <div className='filterContainer'>
                 <button className="buttons prev"onClick={Prev}><i class="fa fa-chevron-left" aria-hidden="true"></i></button> 
                 {
@@ -44,6 +45,7 @@ const Accrodion = () => {
                 <button className ="buttons next" onClick={Next}><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
             </div>
         </div>
+        </>
     )
 }
 
